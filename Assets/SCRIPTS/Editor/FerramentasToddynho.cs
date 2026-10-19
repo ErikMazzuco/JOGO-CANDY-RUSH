@@ -201,6 +201,49 @@ public static class FerramentasToddynho
         return true;
     }
 
+    // ---------- 3) TELA INICIAL ----------
+
+    [MenuItem("Toddynho/3 - Criar tela inicial")]
+    static void CriarTelaInicial()
+    {
+        ArrumarImagensDaTela();
+
+        TelaInicial existente = Object.FindFirstObjectByType<TelaInicial>();
+        if (existente == null)
+        {
+            GameObject go = new GameObject("TELA_INICIAL");
+            Undo.RegisterCreatedObjectUndo(go, "Criar tela inicial");
+            go.AddComponent<TelaInicial>();
+            Selection.activeGameObject = go;
+        }
+        else
+        {
+            Selection.activeGameObject = existente.gameObject;
+        }
+
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorUtility.DisplayDialog("Pronto!", "Tela inicial criada (objeto TELA_INICIAL).\n\n" +
+            "Aperte Play pra ver. Dá pra trocar o título no Inspector.", "OK");
+    }
+
+    // deixa as imagens dos botões nítidas (sem borrar nem comprimir)
+    static void ArrumarImagensDaTela()
+    {
+        foreach (string guid in AssetDatabase.FindAssets("t:Texture2D", new[] { "Assets/UI/Resources/CandyUI" }))
+        {
+            string caminho = AssetDatabase.GUIDToAssetPath(guid);
+            TextureImporter ti = AssetImporter.GetAtPath(caminho) as TextureImporter;
+            if (ti == null) continue;
+            ti.textureType = TextureImporterType.Default;
+            ti.mipmapEnabled = false;
+            ti.alphaIsTransparency = true;
+            ti.npotScale = TextureImporterNPOTScale.None;
+            ti.textureCompression = TextureImporterCompression.Uncompressed;
+            ti.wrapMode = TextureWrapMode.Clamp;
+            ti.SaveAndReimport();
+        }
+    }
+
     // ---------- ajudantes ----------
 
     static Bounds? Medir(GameObject go)
