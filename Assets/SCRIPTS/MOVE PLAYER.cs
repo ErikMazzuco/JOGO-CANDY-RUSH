@@ -1,6 +1,7 @@
 
 using UnityEngine;
 
+
 [RequireComponent(typeof(CharacterController))]
 public class RunnerController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class RunnerController : MonoBehaviour
     public float gravity = -20f;
 
     private CharacterController controller;
+    private PlayerSons playerSons;
     private int currentLane = 1; // 0 = esquerda, 1 = centro, 2 = direita
     private float startX;
     private float verticalVelocity;
@@ -23,6 +25,7 @@ public class RunnerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        playerSons = GetComponent<PlayerSons>();
         startX = transform.position.x;
     }
 
@@ -33,12 +36,14 @@ public class RunnerController : MonoBehaviour
             Input.GetKeyDown(KeyCode.LeftArrow))
         {
             currentLane = Mathf.Max(0, currentLane - 1);
+            playerSons.TocarLateral();
         }
 
         if (Input.GetKeyDown(KeyCode.D) ||
             Input.GetKeyDown(KeyCode.RightArrow))
         {
             currentLane = Mathf.Min(2, currentLane + 1);
+            playerSons.TocarLateral();
         }
 
         // Pular
@@ -52,6 +57,7 @@ public class RunnerController : MonoBehaviour
                 verticalVelocity = Mathf.Sqrt(
                     jumpHeight * -2f * gravity
                 );
+                playerSons.TocarPulo();
             }
         }
 
