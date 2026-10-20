@@ -8,6 +8,7 @@ public class GerenciadorDeSushis : MonoBehaviour
 {
     public float zDaChegada = 600f;          // onde fica a linha de chegada
     public AudioClip somDePegar;              // som quando pega um sushi
+    [Range(0f, 1f)] public float volumeDoSom = 0.3f;   // 0 = mudo, 1 = volume máximo
     public bool esconderPlacar = false;       // marque pra esconder o "SUSHIS 0 / 18" do topo da tela
 
     [Header("Fica mais rápido a cada sushi")]
@@ -76,7 +77,7 @@ public class GerenciadorDeSushis : MonoBehaviour
         if (atual == null || atual.acabou) return;
         atual.pegos++;
         atual.horaUltimoSushi = Time.unscaledTime;
-        if (atual.somDePegar != null) atual.caixaDeSom.PlayOneShot(atual.somDePegar);
+        if (atual.somDePegar != null) atual.caixaDeSom.PlayOneShot(atual.somDePegar, atual.volumeDoSom);
 
         // cada sushi deixa o Toddynho um pouquinho mais rápido
         if (atual.corredor != null)
