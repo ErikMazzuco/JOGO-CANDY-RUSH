@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -15,7 +16,7 @@ public static class FerramentasToddynho
 
     const float alturaMinimaParaCair = 3f; // enfeites pequenininhos não caem
 
-    [MenuItem("Toddynho/1 - Fazer ursos e sorvetes cairem")]
+    [MenuItem("Candy Rush/1 - Fazer ursos e sorvetes cairem")]
     static void FazerCair()
     {
         List<string> nomes = new List<string>();
@@ -106,7 +107,7 @@ public static class FerramentasToddynho
     const float espacoMaximo = 32f;
     const float distanciaDoInicio = 50f;   // começa um pouco depois da largada
 
-    [MenuItem("Toddynho/2 - Criar obstaculos na pista")]
+    [MenuItem("Candy Rush/2 - Criar obstaculos na pista")]
     static void CriarObstaculos()
     {
         RunnerController corredor = Object.FindFirstObjectByType<RunnerController>();
@@ -203,7 +204,7 @@ public static class FerramentasToddynho
 
     // ---------- 3) TELA INICIAL ----------
 
-    [MenuItem("Toddynho/3 - Criar tela inicial")]
+    [MenuItem("Candy Rush/3 - Criar tela inicial")]
     static void CriarTelaInicial()
     {
         ArrumarImagensDaTela();
@@ -242,6 +243,219 @@ public static class FerramentasToddynho
             ti.wrapMode = TextureWrapMode.Clamp;
             ti.SaveAndReimport();
         }
+    }
+
+    // ---------- 4) SUSHIS COLETÁVEIS + LINHA DE CHEGADA ----------
+
+    static readonly string[] prefabsDeSushi =
+    {
+        "Assets/Styloo/3D Food Asset Pack/Prefabs/SushisMaguro.prefab",
+        "Assets/Styloo/3D Food Asset Pack/Prefabs/SushisSalmon.prefab",
+        "Assets/Styloo/3D Food Asset Pack/Prefabs/SushisEggSingle.prefab",
+        "Assets/Styloo/3D Food Asset Pack/Prefabs/SushisRoundMaguro.prefab",
+        "Assets/Styloo/3D Food Asset Pack/Prefabs/SushisRoundsalmon.prefab",
+        "Assets/Styloo/3D Food Asset Pack/Prefabs/SushisRoundEgg.prefab",
+    };
+
+    const float tamanhoDoSushi = 1.1f;     // tamanho do sushi
+    const float alturaDoSushi = 0.8f;      // pertinho do chão
+    const float espacoMinimoSushi = 18f;   // distância mínima entre um sushi e outro
+    const float chanceEmCima = 0.35f;      // de cada 100 sushis, uns 35 ficam em cima do obstáculo (tem que pular)
+
+    [MenuItem("Candy Rush/4 - Espalhar sushis coletaveis")]
+    static void EspalharSushis()
+    {
+        RunnerController corredor = Object.FindFirstObjectByType<RunnerController>();
+        if (corredor == null)
+        {
+            EditorUtility.DisplayDialog("Ops", "Não achei o Toddynho (script RunnerController) na cena.", "OK");
+            return;
+        }
+
+        List<GameObject> modelos = new List<GameObject>();
+        foreach (string caminho in prefabsDeSushi)
+        {
+            GameObject p = AssetDatabase.LoadAssetAtPath<GameObject>(caminho);
+            if (p != null) modelos.Add(p);
+        }
+        if (modelos.Count == 0)
+        {
+            EditorUtility.DisplayDialog("Ops", "Não achei os sushis na pasta Styloo.", "OK");
+            return;
+        }
+
+        // apaga os sushis e a chegada antigos (se já tiver rodado antes)
+        GameObject antigo = GameObject.Find("SUSHIS");
+        if (antigo != null) Undo.DestroyObjectImmediate(antigo);
+        GameObject chegadaAntiga = GameObject.Find("CHEGADA");
+        if (chegadaAntiga != null) Undo.DestroyObjectImmediate(chegadaAntiga);
+
+        GameObject grupo = new GameObject("SUSHIS");
+        Undo.RegisterCreatedObjectUndo(grupo, "Espalhar sushis");
+        GerenciadorDeSushis gerenciador = grupo.AddComponent<GerenciadorDeSushis>();
+
+        float centroX = corredor.transform.position.x;
+        float pista = corredor.laneDistance;
+        float zInicio = corredor.transform.position.z + 30f;
+        float zChegada = FimDoTerreno(centroX) - 25f;
+
+        gerenciador.zDaChegada = zChegada;
+        gerenciador.somDePegar = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/AUDIOS/candy-crush-delicious1.mp3");
+
+        // onde estão os obstáculos (pra não colocar sushi dentro deles)
+        List<Vector3> obstaculos = new List<Vector3>();
+        List<Bounds> caixasDosObstaculos = new List<Bounds>(); // só os da pista (os que não caem)
+        foreach (Obstaculo o in Object.FindObjectsByType<Obstaculo>(FindObjectsSortMode.None))
+        {
+            Bounds? b = Medir(o.gameObject);
+            Vector3 centro = b != null ? b.Value.center : o.transform.position;
+            obstaculos.Add(centro);
+            if (b != null && o.GetComponent<PirulitoCaindo>() == null) caixasDosObstaculos.Add(b.Value);
+        }
+
+        // coloca os sushis ao lado dos obstáculos, na pista que está livre,
+        // assim o jogador tem que desviar bem pertinho do doce pra pegar
+        List<Bounds> porOrdem = new List<Bounds>(caixasDosObstaculos);
+        porOrdem.Sort((a, b) => a.center.z.CompareTo(b.center.z));
+
+        int total = 0;
+        float zUltimoSushi = float.MinValue;
+        foreach (Bounds caixa in porOrdem)
+        {
+            Vector3 obs = caixa.center;
+            if (obs.z < zInicio || obs.z > zChegada - 10f) continue;
+            if (obs.z - zUltimoSushi < espacoMinimoSushi) continue;   // não deixa grudado no anterior
+            if (Mathf.Abs(obs.x - centroX) > pista * 1.6f) continue;  // obstáculo fora da pista
+
+            // às vezes o sushi fica EM CIMA do obstáculo: só pega quem pular
+            if (Random.value < chanceEmCima)
+            {
+                Vector3 emCima = new Vector3(obs.x, caixa.max.y + alturaDoSushi, obs.z);
+                if (CriarSushi(modelos[Random.Range(0, modelos.Count)], grupo.transform, emCima, true))
+                {
+                    total++;
+                    zUltimoSushi = obs.z;
+                    continue;
+                }
+            }
+
+            List<int> pistas = new List<int> { 0, 1, 2 };
+            Embaralhar(pistas);
+            foreach (int p in pistas)
+            {
+                float x = centroX + (p - 1) * pista;
+                if (!LugarLivre(x, obs.z, obstaculos)) continue;
+                if (CriarSushi(modelos[Random.Range(0, modelos.Count)], grupo.transform, new Vector3(x, 0, obs.z)))
+                {
+                    total++;
+                    zUltimoSushi = obs.z;
+                    break;
+                }
+            }
+        }
+
+        CriarChegada(centroX, pista, zChegada);
+
+        Selection.activeGameObject = grupo;
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        EditorUtility.DisplayDialog("Pronto!", total + " sushis espalhados nas pistas.\n" +
+            "A linha de chegada está no fim do mapa (objeto CHEGADA).\n\n" +
+            "Rodar de novo troca os sushis de lugar.", "OK");
+    }
+
+    static bool LugarLivre(float x, float z, List<Vector3> obstaculos)
+    {
+        foreach (Vector3 o in obstaculos)
+            if (Mathf.Abs(o.x - x) < 2f && Mathf.Abs(o.z - z) < 4f) return false;
+        return true;
+    }
+
+    static bool CriarSushi(GameObject modelo, Transform pai, Vector3 lugar, bool emCimaDoObstaculo = false)
+    {
+        float chao;
+        if (emCimaDoObstaculo) chao = lugar.y - alturaDoSushi;   // a "altura do chão" é o topo do obstáculo
+        else if (!AlturaDoChao(lugar, out chao)) return false;
+
+        // um "suporte" vazio no centro, pra o sushi girar em volta do próprio meio
+        GameObject suporte = new GameObject("Sushi");
+        Undo.RegisterCreatedObjectUndo(suporte, "Criar sushi");
+        suporte.transform.SetParent(pai, false);
+        suporte.transform.position = new Vector3(lugar.x, chao + alturaDoSushi, lugar.z);
+
+        GameObject obj = (GameObject)PrefabUtility.InstantiatePrefab(modelo, pai.gameObject.scene);
+        obj.transform.SetParent(suporte.transform, true);
+        obj.transform.position = suporte.transform.position;
+
+        Bounds? medida = Medir(obj);
+        if (medida == null) { Object.DestroyImmediate(suporte); return false; }
+        Bounds b = medida.Value;
+        float fator = tamanhoDoSushi / Mathf.Max(b.size.x, b.size.y, b.size.z, 0.01f);
+        obj.transform.localScale *= fator;
+
+        b = Medir(obj).Value;
+        obj.transform.position += suporte.transform.position - b.center; // centraliza no suporte
+
+        // sem colisão: o Toddynho passa por dentro e pega
+        foreach (Collider c in obj.GetComponentsInChildren<Collider>()) Object.DestroyImmediate(c);
+        TirarStatic(obj);
+
+        SushiColetavel coletavel = suporte.AddComponent<SushiColetavel>();
+        if (emCimaDoObstaculo) coletavel.alturaParaPegar = 1.8f; // passando por baixo não pega: tem que pular
+        return true;
+    }
+
+    static void CriarChegada(float centroX, float pista, float z)
+    {
+        float chao;
+        if (!AlturaDoChao(new Vector3(centroX, 0, z), out chao)) chao = 0f;
+
+        GameObject linha = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        linha.name = "CHEGADA";
+        Undo.RegisterCreatedObjectUndo(linha, "Criar chegada");
+        Object.DestroyImmediate(linha.GetComponent<Collider>());
+        linha.transform.position = new Vector3(centroX, chao + 0.05f, z);
+        linha.transform.localScale = new Vector3(pista * 3f + 4f, 0.1f, 2f);
+
+        Material xadrez = MaterialXadrez();
+        if (xadrez != null) linha.GetComponent<MeshRenderer>().sharedMaterial = xadrez;
+    }
+
+    // cria (uma vez só) o material quadriculado preto e branco da linha de chegada
+    static Material MaterialXadrez()
+    {
+        string pasta = "Assets/UI/Chegada";
+        if (!AssetDatabase.IsValidFolder("Assets/UI")) AssetDatabase.CreateFolder("Assets", "UI");
+        if (!AssetDatabase.IsValidFolder(pasta)) AssetDatabase.CreateFolder("Assets/UI", "Chegada");
+
+        string caminhoMaterial = pasta + "/Xadrez.mat";
+        Material existente = AssetDatabase.LoadAssetAtPath<Material>(caminhoMaterial);
+        if (existente != null) return existente;
+
+        string caminhoImagem = pasta + "/xadrez.png";
+        Texture2D t = new Texture2D(16, 2);
+        for (int x = 0; x < 16; x++)
+            for (int y = 0; y < 2; y++)
+                t.SetPixel(x, y, (x + y) % 2 == 0 ? Color.white : new Color(0.1f, 0.1f, 0.1f));
+        File.WriteAllBytes(caminhoImagem, t.EncodeToPNG());
+        AssetDatabase.ImportAsset(caminhoImagem);
+
+        TextureImporter ti = AssetImporter.GetAtPath(caminhoImagem) as TextureImporter;
+        if (ti != null)
+        {
+            ti.filterMode = FilterMode.Point;
+            ti.mipmapEnabled = false;
+            ti.textureCompression = TextureImporterCompression.Uncompressed;
+            ti.SaveAndReimport();
+        }
+        Texture2D textura = AssetDatabase.LoadAssetAtPath<Texture2D>(caminhoImagem);
+
+        Shader shader = Shader.Find("Universal Render Pipeline/Lit");
+        if (shader == null) shader = Shader.Find("Standard");
+        Material m = new Material(shader);
+        m.mainTexture = textura;
+        if (m.HasProperty("_BaseMap")) m.SetTexture("_BaseMap", textura);
+        AssetDatabase.CreateAsset(m, caminhoMaterial);
+        return m;
     }
 
     // ---------- ajudantes ----------

@@ -121,8 +121,8 @@ public class TelaInicial : MonoBehaviour
         {
             "A / D  ou  setas  -  trocar de pista",
             "ESPAÇO  -  pular",
-            "Desvie dos doces na pista",
-            "e dos pirulitões que caem!"
+            "Pegue TODOS os sushis",
+            "e desvie dos doces até a chegada!"
         };
         float y = r.y + ph * 0.28f;
         foreach (string l in linhas)
