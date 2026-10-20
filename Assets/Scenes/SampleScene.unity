@@ -2916,6 +2916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149605852}
   - component: {fileID: 149605853}
+  - component: {fileID: 149605854}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -2955,6 +2956,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &149605854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149605851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &152562701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4196,6 +4212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183135752}
   - component: {fileID: 183135753}
+  - component: {fileID: 183135754}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -4235,6 +4252,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &183135754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183135751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &185599821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4302,6 +4334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186061251}
   - component: {fileID: 186061252}
+  - component: {fileID: 186061253}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -4341,6 +4374,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &186061253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186061250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &192446998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8374822978442423706, guid: 207ca9e782baa57478b187974df6cd6f, type: 3}
@@ -8756,6 +8804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 377032209}
   - component: {fileID: 377032210}
+  - component: {fileID: 377032211}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -8795,6 +8844,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &377032211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377032208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &378012262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5823834802002670943, guid: b1cd2990f61cd9d439beb3315f289a6c, type: 3}
@@ -10834,7 +10898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00002427905
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10842,7 +10906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9992668
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10854,7 +10918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.038287256
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10866,7 +10930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204074120553524390, guid: 597a0dff8a9ced34d881526dc213a1cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 4.388
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11513,6 +11577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 500139473}
   - component: {fileID: 500139474}
+  - component: {fileID: 500139475}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -11552,6 +11617,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &500139475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500139472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &501183242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5739643368502557479, guid: 6439df6301b33cc4cb7590df55ef09c7, type: 3}
@@ -11929,6 +12009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 527155841}
   - component: {fileID: 527155842}
+  - component: {fileID: 527155843}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -11968,6 +12049,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &527155843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527155840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &529047552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12732,6 +12828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557190103}
   - component: {fileID: 557190104}
+  - component: {fileID: 557190105}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -12771,6 +12868,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &557190105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557190102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1 &561798050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2420661525457292046, guid: 258fb41f31db4d945a3a7461cd94ab0b, type: 3}
@@ -16001,6 +16113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703152673}
   - component: {fileID: 703152674}
+  - component: {fileID: 703152675}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -16040,6 +16153,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &703152675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703152672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1 &707775614
 GameObject:
   m_ObjectHideFlags: 0
@@ -16322,6 +16450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717709128}
   - component: {fileID: 717709129}
+  - component: {fileID: 717709130}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -16361,6 +16490,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &717709130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717709127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1 &717898461
 GameObject:
   m_ObjectHideFlags: 0
@@ -16371,6 +16515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717898462}
   - component: {fileID: 717898463}
+  - component: {fileID: 717898464}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -16410,6 +16555,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &717898464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717898461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &718298100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16585,6 +16745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729816802}
   - component: {fileID: 729816803}
+  - component: {fileID: 729816804}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -16624,6 +16785,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &729816804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729816801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &732100083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18536,11 +18712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696705927618708729, guid: 05dfb0a74d3106047aba56a7ce73b754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.7
+      value: 53.09
       objectReference: {fileID: 0}
     - target: {fileID: 4696705927618708729, guid: 05dfb0a74d3106047aba56a7ce73b754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4696705927618708729, guid: 05dfb0a74d3106047aba56a7ce73b754, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20202,6 +20378,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5566935668092038905, guid: 0851e1e951cfc3b46a1c55facd020d3d, type: 3}
   m_PrefabInstance: {fileID: 886737659}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &887324701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 626301483934524752, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+  m_PrefabInstance: {fileID: 1062473084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &887324702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+  m_PrefabInstance: {fileID: 1062473084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &887324703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887324701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037aca65660b167408af9094d9aaf626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &887324704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887324701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07580643, y: 0.048392054, z: 0.071724825}
+  m_Center: {x: 0, y: 0.023481678, z: 0}
 --- !u!4 &891482051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8374822978442423706, guid: 207ca9e782baa57478b187974df6cd6f, type: 3}
@@ -23077,6 +23296,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1298953412291473396, guid: 3f6d24af6c80fe042bc5049f5f4eb822, type: 3}
   m_PrefabInstance: {fileID: 1661160903}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1062473084
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1829056556}
+    m_Modifications:
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 39.57488
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 39.57488
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 39.57488
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 626.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286754063730081770, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 626301483934524752, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      propertyPath: m_Name
+      value: Gummy Cube (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 626301483934524752, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 887324704}
+    - targetCorrespondingSourceObject: {fileID: 626301483934524752, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 887324703}
+  m_SourcePrefab: {fileID: 100100000, guid: 99360d7df1d67914fa4f916faf5959ca, type: 3}
 --- !u!4 &1064316842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8374822978442423706, guid: 207ca9e782baa57478b187974df6cd6f, type: 3}
@@ -23724,7 +24018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7421060158732679116, guid: a8ead431877fdc046b19b0440117a05a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 704.5622
+      value: 697.89
       objectReference: {fileID: 0}
     - target: {fileID: 7421060158732679116, guid: a8ead431877fdc046b19b0440117a05a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24605,11 +24899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037aca65660b167408af9094d9aaf626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1119155030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5986849101107965143, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-  m_PrefabInstance: {fileID: 1986160974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1120373840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24925,6 +25214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135418562}
   - component: {fileID: 1135418563}
+  - component: {fileID: 1135418564}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -24964,6 +25254,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1135418564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135418561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &1138038983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5823834802002670943, guid: b1cd2990f61cd9d439beb3315f289a6c, type: 3}
@@ -25925,6 +26230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209774580}
   - component: {fileID: 1209774581}
+  - component: {fileID: 1209774582}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -25964,6 +26270,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1209774582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209774579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1 &1209952276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3096628903929742021, guid: 0cd69b313f370d34fb203128d22cf403, type: 3}
@@ -26688,6 +27009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252638179}
   - component: {fileID: 1252638180}
+  - component: {fileID: 1252638181}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -26727,6 +27049,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1252638181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252638178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &1260465335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26892,6 +27229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263186770}
   - component: {fileID: 1263186771}
+  - component: {fileID: 1263186772}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -26931,6 +27269,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1263186772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263186769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &1264947048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3627744151775195504, guid: bca3d9965bcf77f49a0ec6f0661fd85c, type: 3}
@@ -27749,7 +28102,6 @@ Transform:
   - {fileID: 1710057768}
   - {fileID: 62666351}
   - {fileID: 2099799166}
-  - {fileID: 1760676039}
   - {fileID: 1239933505}
   - {fileID: 146807785}
   - {fileID: 539405641}
@@ -28915,6 +29267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334034490}
   - component: {fileID: 1334034491}
+  - component: {fileID: 1334034492}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -28954,6 +29307,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1334034492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334034489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1 &1335345904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4855765858481360973, guid: 5f54699b7082b5440ba2ceea154dd644, type: 3}
@@ -29958,6 +30326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372402027}
   - component: {fileID: 1372402028}
+  - component: {fileID: 1372402029}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -29997,6 +30366,21 @@ MonoBehaviour:
   alturaParaPegar: 1.8
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1372402029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372402026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &1377032073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7292057963618547123, guid: 7c66eb2c5a111e449ad710d0d0769bf8, type: 3}
@@ -30156,6 +30540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381291994}
   - component: {fileID: 1381291995}
+  - component: {fileID: 1381291996}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -30195,6 +30580,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1381291996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381291993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &1381608071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34222,6 +34622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533538329}
   - component: {fileID: 1533538330}
+  - component: {fileID: 1533538331}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -34261,6 +34662,21 @@ MonoBehaviour:
   alturaParaPegar: 1.8
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1533538331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533538328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &1537783554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36459,6 +36875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632234339}
   - component: {fileID: 1632234340}
+  - component: {fileID: 1632234341}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -36498,6 +36915,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1632234341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632234338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &1633592480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36910,8 +37342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2215ec49eeef2489fa2c9d80fee5cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zDaChegada: 725
-  somDePegar: {fileID: 8300000, guid: 9a465fa28b92452419453f52a1988220, type: 3}
+  zDaChegada: 709.18
+  somDePegar: {fileID: 8300000, guid: 3a70848f1b677e54c8844e0df350d894, type: 3}
   esconderPlacar: 0
   aumentoPorSushi: 0.6
   velocidadeMaxima: 16
@@ -38137,8 +38569,8 @@ Transform:
   m_GameObject: {fileID: 1707158434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.85, y: 1.3805969, z: 725}
-  m_LocalScale: {x: 16, y: 0.1, z: 2}
+  m_LocalPosition: {x: 47.71, y: 0.26, z: 709.18}
+  m_LocalScale: {x: 34.276356, y: 0.1, z: 3.8335426}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -38717,45 +39149,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1cd2990f61cd9d439beb3315f289a6c, type: 3}
---- !u!4 &1760676039 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-  m_PrefabInstance: {fileID: 1986160974}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1760676042
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119155030}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1244196570145275820, guid: cf746a9659d8ab14f9425f3366cd03f8, type: 3}
---- !u!114 &1760676045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119155030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037aca65660b167408af9094d9aaf626, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1764435032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40132,6 +40525,7 @@ Transform:
   - {fileID: 1403500932}
   - {fileID: 351248423}
   - {fileID: 182682850}
+  - {fileID: 887324702}
   - {fileID: 1907664945}
   - {fileID: 808379453}
   - {fileID: 1076614957}
@@ -40147,6 +40541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832849920}
   - component: {fileID: 1832849921}
+  - component: {fileID: 1832849922}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -40186,6 +40581,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1832849922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832849919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!1001 &1833999737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41166,6 +41576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1894092796}
   - component: {fileID: 1894092797}
+  - component: {fileID: 1894092798}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -41205,6 +41616,21 @@ MonoBehaviour:
   alturaParaPegar: 1.8
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1894092798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894092795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &1898474150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8374822978442423706, guid: 207ca9e782baa57478b187974df6cd6f, type: 3}
@@ -43036,6 +43462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955650946}
   - component: {fileID: 1955650947}
+  - component: {fileID: 1955650948}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -43075,6 +43502,21 @@ MonoBehaviour:
   alturaParaPegar: 5
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &1955650948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955650945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &1956627083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7881466077556996133, guid: b85f67ac51f81184994dda1fda840a31, type: 3}
@@ -43694,81 +44136,6 @@ MonoBehaviour:
   anguloFinal: 90
   aceleracao: 200
   centroDaPistaX: 45.3
---- !u!1001 &1986160974
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1294773321}
-    m_Modifications:
-    - target: {fileID: 5986849101107965143, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_Name
-      value: cookiecolorful
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 45.828644
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0017904813
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 715.3895
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6367631536503158381, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5986849101107965143, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1760676042}
-    - targetCorrespondingSourceObject: {fileID: 5986849101107965143, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1760676045}
-  m_SourcePrefab: {fileID: 100100000, guid: 897cd60c803e54c4d8f56842ed3ab75e, type: 3}
 --- !u!1001 &1987475097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45154,6 +45521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047452873}
   - component: {fileID: 2047452874}
+  - component: {fileID: 2047452875}
   m_Layer: 0
   m_Name: Sushi
   m_TagString: Untagged
@@ -45193,6 +45561,21 @@ MonoBehaviour:
   alturaParaPegar: 1.8
   alturaDoBalanco: 0.2
   velocidadeDoBalanco: 1.5
+--- !u!114 &2047452875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047452872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb8cc3295bbf5143b184457d4f5237e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 70
+  alturaFlutuacao: 0.1
+  velocidadeFlutuacao: 2
 --- !u!4 &2048227830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4696705927618708729, guid: 05dfb0a74d3106047aba56a7ce73b754, type: 3}
@@ -48377,7 +48760,6 @@ SceneRoots:
   - {fileID: 1829056556}
   - {fileID: 646114150}
   - {fileID: 1054953405}
-  - {fileID: 322526434}
   - {fileID: 368178685}
   - {fileID: 299340897}
   - {fileID: 1280972026}
@@ -48386,5 +48768,6 @@ SceneRoots:
   - {fileID: 220359486}
   - {fileID: 538779071}
   - {fileID: 732233856}
+  - {fileID: 322526434}
   - {fileID: 1651481690}
   - {fileID: 1707158437}
