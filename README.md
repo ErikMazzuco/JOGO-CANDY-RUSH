@@ -52,6 +52,22 @@ O jogador pode se movimentar entre três faixas, pular obstáculos e explorar um
 
 O projeto foi desenvolvido para a disciplina de Realidade Virtual, com o objetivo de aplicar conhecimentos de desenvolvimento de jogos 3D, programação, movimentação de personagens, colisões e interação com objetos em um ambiente virtual.
 
+
+
+## 📥 Download
+
+Quer jogar Candy Rush?
+
+**[Baixar Candy Rush para Windows](https://github.com/ErikMazzuco/JOGO-CANDY-RUSH/releases/latest)**
+
+1. Baixe o arquivo ZIP da versão mais recente.
+2. Extraia todos os arquivos para uma pasta.
+3. Execute `Candy Rush.exe` para começar a jogar.
+
+*Observação: o jogo deve ser executado no Windows e pode exibir um aviso de segurança por ser um aplicativo não assinado.*
+
+
+
 ## 👨‍💻 Autor
 
 **Erik Mazzuco**
