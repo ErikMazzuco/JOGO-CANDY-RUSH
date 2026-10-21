@@ -58,7 +58,9 @@ O projeto foi desenvolvido para a disciplina de Realidade Virtual, com o objetiv
 
 GitHub: [@Erik Mazzuco](https://github.com/ErikMazzuco)
 
+
 **Yasmin Yamamoto**
+
 GitHub: [@Yasmin Yamamoto](https://github.com/Yasmin-YY)
 
 ---
