@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "TRAB-JORGE-TODINHO.slnx",
+    "dotnet.defaultSolution": "JOGO-CANDY-RUSH.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
